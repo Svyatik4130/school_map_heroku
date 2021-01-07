@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background: #1c8ef9 !important; */
+  min-height: 100vh;
+  display: flex;
+  font-weight: 400;
+  font-family: "Fira Sans", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+.preloader-inner {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #5b8982;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+span {
+  font-weight: 500;
+  font-family: "Fira Sans", sans-serif;
+}
+
+button {
+  border: none;
+  background: none;
+  color: unset;
+  cursor: pointer;
+  outline: none !important;
+}
+
+body,
+html,
+.App,
+#root,
+.auth-wrapper {
+  width: 100%;
+  height: 99%;
+}
+.auth-wrapper-logNreg {
+  width: 100%;
+  background-color: #5b8982;
+  height: 100%;
+}
+.logNreg-btn {
+  background-color: #bac8a0 !important;
+  border-color: #bac8a0 !important;
+  transition: 500ms;
+}
+.logNreg-btn:hover {
+  background-color: #859070 !important;
+  transition: 500ms;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+
+.navbar-logged {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.error-notice {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border: 1px solid rgb(255, 156, 156);
+  background-color: rgb(255, 71, 71);
+  display: flex;
+  color: rgb(240, 240, 240);
+  justify-content: space-between;
+}
+.error-notice button {
+  background-color: rgb(197, 0, 0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.6rem;
+}
+
+.auth-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.auth-inner {
+  width: 60%;
+  margin: auto;
+  background: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  margin-top: 50px;
+}
+.auth-inner-home {
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  margin-top: 50px;
+  background-color: #f2f6fc;
+}
+.auth-inner-reports {
+  width: 100%;
+  margin: auto;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+  padding: 40px 55px 45px 55px;
+  border-radius: 15px;
+  transition: all 0.3s;
+  margin-top: 0px;
+  background-color: #f2f6fc;
+}
+
+.auth-wrapper .form-control:focus {
+  border-color: #1236d6;
+  box-shadow: none;
+}
+
+.auth-wrapper h3 {
+  text-align: center;
+  margin: 0;
+  line-height: 1;
+  padding-bottom: 20px;
+}
+
+.preloader {
+  margin: 0px auto;
+}
+.preloader {
+  position: absolute;
+  top: 45%;
+  left: 43%;
+}
+
+.custom-control-label {
+  font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+  text-align: right;
+  font-size: 13px;
+  padding-top: 10px;
+  color: #7f7d7d;
+  margin: 0;
+}
+
+.forgot-password a {
+  color: #167bff;
+}
+.error-notice {
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+  border: 1px solid rgb(255, 156, 156);
+  background-color: rgb(255, 71, 71);
+  display: flex;
+  color: rgb(240, 240, 240);
+  justify-content: space-between;
+}
+.error-notice button {
+  background-color: rgb(197, 0, 0);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.6rem;
+}
+.auth-button {
+  margin-right: 5px;
+}
+
+.info-map
+  .react-transform-component
+  .react-transform-element
+  > svg
+  > path:hover {
+  fill: #bac8a0;
+  cursor: pointer;
+  transition: 200ms;
+  outline: none;
+}
+.info-map
+  .react-transform-component
+  .react-transform-element
+  > svg
+  > path:not(:hover) {
+  transition: 400ms;
+  outline: none;
+}
+.info {
+  background-color: #5b8982;
+}
+#flagImage {
+  display: block;
+}
+#titleOfInfo {
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: #ffffff;
+}
+.flagNameTime {
+  justify-content: space-between;
+  display: flex;
+  margin: 15px 20px;
+}
+#time {
+  font-size: 45px;
+  color: #ffffff;
+  text-align: center;
+}
+#description {
+  font-size: 20px;
+  margin: 15px 20px;
+  color: #ffffff;
+}
+.descDIV {
+  overflow: scroll;
+  height: 600px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.timediv {
+  width: 100px;
+}
+
+/* #797367 #cec6b6 #45545F */
+
+/* #5b8982 #ffffff #bac8a0 */
+
+.make-point-div .inner-div .react-transform-component {
+  width: 93% !important;
+  height: 95% !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.react-transform-component {
+  width: 100% !important;
+  height: 100% !important;
+}
+.react-transform-element {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.make-point-div .inner-div {
+  height: 90%;
+  width: 90%;
+}
+
+.colPointMap {
+  height: 100%;
+}
+
+.info-map {
+  height: 100%;
+  width: 100%;
+}
+
+.navbar-light {
+  background-color: #ffffff;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+}
+#fullInfo {
+  background-color: #5b8982;
+  height: 800px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.pre-loader {
+  background: #5b8982;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  animation: imganim 0.5s linear both;
+  animation-delay: 0.5s;
+}
+.pre-loader > svg {
+  position: fixed;
+  left: 42%;
+  top: 42%;
+  width: 15%;
+  height: 15%;
+}
+.preloader {
+  margin: 0px auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.make-point-div {
+  width: 100%;
+  height: 100%;
+}
+
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .inner-div:hover {
+  cursor: crosshair;
+}
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .point-read-only:hover {
+  cursor: default;
+}
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .point-read-only
+  .notes
+  div:hover {
+  cursor: pointer;
+}
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .inner-div
+  > svg
+  > path {
+  outline: none;
+}
+.map-for-point > path {
+  outline: none;
+}
+
+.inner-div .notes {
+  position: absolute;
+}
+
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .point-read-only
+  .notes
+  div {
+  width: 3px;
+  height: 3px;
+}
+.make-point-div
+  .react-transform-component
+  .react-transform-element
+  .point-read-only
+  .notes
+  div:hover {
+  width: 6px;
+  height: 6px;
+}
+.notes > div {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #51ff00;
+  transition: width 200ms, height 200ms, border-radius 200ms, left 200ms,
+    top 200ms;
+  -moz-transition: width 200ms, height 200ms, border-radius 200ms, left 200ms,
+    top 200ms;
+  -ms-transition: width 200ms, height 200ms, border-radius 200ms, left 200ms,
+    top 200ms;
+  -o-transition: width 200ms, height 200ms, border-radius 200ms, left 200ms,
+    top 200ms;
+  -webkit-transition: width 200ms, height 200ms, border-radius 200ms, left 200ms,
+    top 200ms;
+}
+.notes > div:hover {
+  background-color: #bac8a0;
+  transition: 200ms;
+  border-radius: 50%;
+  top: -2px;
+  width: 8px;
+  height: 8px;
+}
+
+.tooltip {
+  position: absolute;
+}
+.btn-tool {
+  position: absolute;
+}
+
+.addnote-div {
+  position: absolute;
+  right: 0%;
+  width: 20%;
+  /* height: 38%; */
+  background-color: #5b8982;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  opacity: 0.85;
+  z-index: 2;
+}
+.addnote-div textarea {
+  display: block;
+  background-color: #ffffffd7;
+  resize: none;
+  height: 100px;
+  width: 95%;
+  padding: 5px;
+  margin: 0px auto;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+.addnote-div .title-and-cross {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.addnote-div .title-and-cross h6 {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+.addnote-div .submit-btn {
+  background-color: #bac8a0;
+  border-radius: 3px;
+  display: block;
+  border: none;
+  margin: 5px auto;
+  width: 95%;
+  padding: 4px 0px;
+  transition: 300ms;
+}
+.addnote-div .submit-btn:hover {
+  background-color: #97ac70;
+  transition: 300ms;
+}
+
+.menu-active {
+  color: #363636 !important;
+}
+
+.logoutBtn {
+  color: rgb(255, 22, 22);
+  transition: 300ms;
+}
+.logoutBtn:hover {
+  color: rgb(255, 115, 115);
+  transition: 300ms;
+}
+.close-btn {
+  height: 0px;
+  padding-top: 0px;
+  font-size: 25px;
+  color: rgb(136, 0, 0);
+}
+
+@keyframes imganim {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@media (min-width: 761px) and (max-width: 849px) {
+  #time {
+    font-size: 20px;
+  }
+  .timediv {
+    width: 70px;
+  }
+}
+@media (min-width: 850px) and (max-width: 1400px) {
+  #time {
+    font-size: 28px;
+  }
+}
+@media (max-width: 760px) {
+  .colMap {
+    height: 400px;
+  }
+  #time {
+    font-size: 65px;
+  }
+  #fullInfo {
+    height: 300px;
+  }
+  .auth-inner {
+    width: 95%;
+    margin-left: 10xp;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .addnote-div {
+    bottom: 0;
+    left: 0;
+    width: 95%;
+  }
+  .oneNote {
+    width: 1px;
+    height: 1px;
+  }
+  .close-btn {
+    height: 0px;
+    padding-top: 0px;
+    font-size: 40px;
+    padding-right: 0px;
+    color: rgb(136, 0, 0);
+  }
+}
+@media (max-width: 550px) {
+  #time {
+    font-size: 30px;
+  }
+}
