@@ -35,8 +35,8 @@ export default function SeeAllPoints() {
             // const elem = document.getElementsByClassName("react-transform-component")[0]
             data.map((note) => {
                 const elem = document.getElementsByClassName("svgmap")[0]
-                // const wdthOnePercent = elem.offsetWidth / 100
-                // note.pointCoords.x = note.pointCoords.x * wdthOnePercent
+                const wdthOnePercent = elem.offsetWidth / 100
+                note.pointCoords.x = note.pointCoords.x * wdthOnePercent
 
                 const hgthOnePercent = elem.offsetHeight / 100
                 note.pointCoords.y = note.pointCoords.y * hgthOnePercent
