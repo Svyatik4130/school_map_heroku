@@ -477,6 +477,24 @@ html,
   font-size: 25px;
   color: rgb(136, 0, 0);
 }
+.descDIV{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes imganim {
   from {

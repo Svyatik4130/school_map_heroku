@@ -35,7 +35,7 @@ export default function Main() {
                             </Col>
                         </Row>
                         <Row>
-                            <div className="descDIV">
+                            <div id="outer-desc-div" className="descDIV">
                                 <p id="description"></p>
                             </div>
                         </Row>

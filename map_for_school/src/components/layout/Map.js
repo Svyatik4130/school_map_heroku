@@ -110,8 +110,10 @@ function Map() {
             // displaying it
             let nameInput = document.getElementById("titleOfInfo");
             let descInput = document.getElementById("description");
+            let descInput_outer = document.getElementById("outer-desc-div");
 
             nameInput.innerHTML = name;
+            descInput_outer.style.display = "block"
             descInput.innerHTML = foundedArray.description;
 
             // setting image
