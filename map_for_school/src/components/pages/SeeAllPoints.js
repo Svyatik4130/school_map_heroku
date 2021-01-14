@@ -113,13 +113,10 @@ export default function SeeAllPoints() {
                         <Modal.Title>Hint</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Select any dot on the map to learn more about the note left by someone
+                        <hr />
+                        <p style={{ "fontStyle": "italic", "color": "#656565" }}>To enlarge the map use your mousewheel or just pinch to zoom in</p>
                         {AdditionalTextForMobileDevices}
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="primary" onClick={() => { history.push("/makepoint"); handleClose() }}>
-                            I want to create my own dot!!!
-                        </Button>
-                    </Modal.Footer>
                 </div>
             </Modal>
 

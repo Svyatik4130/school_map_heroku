@@ -56,7 +56,7 @@ export default function Register() {
 
                         <button type="submit" className="btn btn-primary btn-block logNreg-btn">Sign Up</button>
                         <p className="forgot-password text-right">
-                            Already registered <Link to={"/login"}>Sign-in</Link>
+                            Already registered <Link to={"/sign-in"}>Sign-in</Link>
                         </p>
                     </form>
                 </div>

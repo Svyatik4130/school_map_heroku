@@ -125,13 +125,10 @@ export default function MapForPoint() {
                         <Modal.Title>Hint about creating a dot</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>Here you can create your own dot with some extra notes on this map. Just click or tap anywhere and in appeared window type your unique note!
-                    {AdditionalTextForMobileDevices}
+                        <hr />
+                        <p style={{ "fontStyle": "italic", "color": "#656565" }}>To enlarge the map use your mousewheel or just pinch to zoom in</p>
+                        {AdditionalTextForMobileDevices}
                     </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="primary" onClick={() => { history.push("/seepoints"); handleClose() }}>
-                            I want to see others' dots!!!
-                        </Button>
-                    </Modal.Footer>
                 </div>
             </Modal>
             <Modal show={showSuccesss} onHide={() => { handleCloseSuccess() }} centered>

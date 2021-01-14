@@ -49,10 +49,6 @@ function App() {
     checkLoggedIn()
   }, [])
 
-  useEffect(() => {
-    console.log(window.location.href)
-  }, [window.location.href])
-
   if (!isLoaded) {
     return (
       <div className="container">

@@ -11,7 +11,6 @@ export default function Main() {
     const [AdditionalTextForMobileDevices, setAdditionalTextForMobileDevices] = useState()
 
     let isMainModalShowed = localStorage.getItem("isMainModalShowed");
-    console.log( typeof( Number(isMainModalShowed) ),  (Number(isMainModalShowed) > 2) || (isMainModalShowed !== null))
     const handleClose = () => {
         setmodalShowed(true)
         localStorage.setItem("isMainModalShowed", (isMainModalShowed == null) ? (0) : ((typeof(Number(isMainModalShowed)) === "number") ? (Number(isMainModalShowed) + 1) : (0)));

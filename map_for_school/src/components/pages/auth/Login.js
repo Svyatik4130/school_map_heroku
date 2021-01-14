@@ -53,7 +53,7 @@ export default function Login() {
 
                     <button type="submit" className="btn btn-primary btn-block logNreg-btn">Submit</button>
                     <p className="forgot-password text-right">
-                        Dont have account? <Link to={"/register"}>Sign-up</Link>
+                        Dont have account? <Link to={"/sign-up"}>Sign-up</Link>
                     </p>
                 </form>
             </div>
