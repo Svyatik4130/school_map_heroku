@@ -1,5 +1,5 @@
 {
-    "root": "build/",
+    "root": "/map_for_school/build/",
     "clean_urls": false,
     "routes": {
         "/**": "index.html"
