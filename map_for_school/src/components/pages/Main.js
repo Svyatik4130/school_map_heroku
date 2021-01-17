@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Loader from 'react-loader-spinner'
 import { Container, Row, Col } from 'react-bootstrap';
 import { Modal, Button } from 'react-bootstrap'
-import { useHistory } from "react-router-dom"
 
 import Map from '../layout/Map'
 
@@ -57,7 +55,7 @@ export default function Main() {
                         <Row>
                             <Col>
                                 <div className="authIMG">
-                                    <img id='flagImage' style={{ width: '100%' }} src={require('../../images/state.png')} alt="flag" />
+                                    <img id='flagImage' style={{ width: '100%' }} src={require('../../images/default.png')} alt="flag" />
                                 </div>
                             </Col>
                             <Col>

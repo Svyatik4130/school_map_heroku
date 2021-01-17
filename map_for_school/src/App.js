@@ -14,6 +14,7 @@ import Login from './components/pages/auth/Login'
 import Register from './components/pages/auth/Register'
 import Point from './components/layout/MapForPoint'
 import ListPoints from './components/pages/SeeAllPoints'
+import NotFound from './components/layout/misc/NotFound'
 
 
 function App() {
@@ -80,6 +81,9 @@ function App() {
               </Route>
               <Route path="/seepoints">
                 <ListPoints />
+              </Route>
+              <Route>
+                <NotFound />
               </Route>
             </Switch>
           </div>

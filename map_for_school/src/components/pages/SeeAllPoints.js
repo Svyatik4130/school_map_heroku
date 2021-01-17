@@ -41,7 +41,6 @@ export default function SeeAllPoints() {
                 const hgthOnePercent = elem.offsetHeight / 100
                 note.pointCoords.y = note.pointCoords.y * hgthOnePercent
             })
-            console.log(data)
             setnotes(data)
 
             if (window.innerWidth < 1000) {

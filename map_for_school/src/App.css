@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
 
 * {
   box-sizing: border-box;
@@ -56,6 +57,51 @@ html,
   width: 100%;
   background-color: #5b8982;
   height: 100%;
+  position: relative;
+}
+.bckgd404{
+  background-color: #a8dedc;
+}
+.desc404{
+  margin: 0px auto;
+  width: 40%;
+}
+.desc404 .desc{
+  font-size: 21px;
+  font-family: 'Potta One';
+  text-align: center;
+  color: #4444445d;
+}
+.back404mainbtn{
+  padding: 5px;
+  display: block;
+  font-size: 16px;
+  color: #58857f;
+  border: 2px solid #58857f;
+  border-radius: 3px;
+  margin: 10px auto;
+  transition: 500ms;
+}
+.back404mainbtn:hover{
+  background-color: #58857f;
+  color: #fff;
+  transition: 500ms;
+}
+
+.gif404{
+  display: block;
+  width: 35%;
+  position: absolute;
+  bottom: 0%;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+}
+.title404{
+  font-family: 'Potta One', cursive;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 100px;
 }
 .logNreg-btn {
   background-color: #bac8a0 !important;
@@ -551,6 +597,15 @@ html,
     font-size: 40px;
     padding-right: 0px;
     color: rgb(136, 0, 0);
+  }
+  .desc404{
+    width: 90%;
+  }
+  .back404mainbtn{
+    font-size: 20px;
+  }
+  .gif404{
+    width: 85%;
   }
 }
 @media (max-width: 550px) {
