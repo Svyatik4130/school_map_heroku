@@ -85,6 +85,9 @@ function App() {
               <Route>
                 <NotFound />
               </Route>
+              <Route path="/heroku404">
+                <NotFound />
+              </Route>
             </Switch>
           </div>
         </div>
