@@ -10,6 +10,7 @@ export default function NotFound() {
 
     return (
         <div className="auth-wrapper-logNreg bckgd404">
+            <a href="https://dribbble.com/shots/9516613-Melting-Earth" target="_blank" className="source">gif source</a>
             <p className="title404" >404</p>
             <div className="desc404">
                 <p className="desc" >We searched hight and low, but we could not find what you are looking for. Let's better discover some new places on our Earth!</p>
