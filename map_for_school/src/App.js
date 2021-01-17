@@ -82,7 +82,7 @@ function App() {
               <Route path="/seepoints">
                 <ListPoints />
               </Route>
-              <Route>
+              <Route path='*' exact={true}>
                 <NotFound />
               </Route>
               <Route path="/heroku404">
