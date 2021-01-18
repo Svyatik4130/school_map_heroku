@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "cd map_for_school && npm run build",
+    "install": "cd map_for_school && npm install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "heroku-postbuild": "cd map_for_school && npm install && npm run build"
   },
