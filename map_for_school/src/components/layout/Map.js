@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 import { VectorMap } from '@south-paw/react-vector-maps';
 import world from '../../world.json';
@@ -13,6 +13,7 @@ const images = importAll(require.context('./../../images', false, /\.(png|jpe?g|
 
 function Map() {
     const [isDrag, setisDrag] = useState(false)
+    const [DefaultScaleMap, setDefaultScaleMap] = useState(50)
 
     // let recentPressedCountryID = [];
     const [recentPressedCountryID, setrecentPressedCountryID] = useState([])
@@ -124,6 +125,12 @@ function Map() {
         }
     }
 
+    useEffect(() => {
+        if(window.innerWidth < 1000){
+            setDefaultScaleMap(200)
+        }
+    }, [])
+
 
     function dragEnd() {
         setTimeout(() => {
@@ -142,7 +149,7 @@ function Map() {
             <TransformWrapper
                 defaultPositionX={200}
                 defaultPositionY={100}
-                options={{ maxScale: 40 }}
+                options={{ maxScale: DefaultScaleMap }}
                 onPanningStart={() => dragStart()}
                 onPanningStop={() => dragEnd()}
                 doubleClick={{ disabled: true }}>
