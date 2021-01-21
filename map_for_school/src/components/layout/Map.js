@@ -13,7 +13,7 @@ const images = importAll(require.context('./../../images', false, /\.(png|jpe?g|
 
 function Map() {
     const [isDrag, setisDrag] = useState(false)
-    const [DefaultScaleMap, setDefaultScaleMap] = useState(50)
+    const [DefaultScaleMap, setDefaultScaleMap] = useState(40)
 
     // let recentPressedCountryID = [];
     const [recentPressedCountryID, setrecentPressedCountryID] = useState([])

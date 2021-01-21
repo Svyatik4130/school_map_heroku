@@ -72,23 +72,23 @@ export default function NavMenu() {
                     {userData.user ? (
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/seepoints"}><button className={MenuStatus.seepoints} onClick={() => {setNewActive("seepoints") }}>See other people's dots on the map</button></Link>
+                                <Link className="nav-link navTitleAnim1" to={"/seepoints"}><button className={MenuStatus.seepoints} onClick={() => {setNewActive("seepoints") }}>See other people's dots on the map</button></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/makepoint"}><button className={MenuStatus.createpoint} onClick={() => {setNewActive("createpoint") }}>Create own dot</button></Link>
+                                <Link className="nav-link navTitleAnim2" to={"/makepoint"}><button className={MenuStatus.createpoint} onClick={() => {setNewActive("createpoint") }}>Create own dot</button></Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to={"/"}><button className="logoutBtn" onClick={logout}>Log out</button></Link>
+                                <Link className="nav-link navTitleAnim3" to={"/"}><button className="logoutBtn" onClick={logout}>Log out</button></Link>
                             </li>
                         </ul>
                     ) : (
                             <>
                                 <ul className="navbar-nav">
                                     <li className="nav-item">
-                                        <Link className="nav-link" to={"/sign-in"}>Login</Link>
+                                        <Link className="nav-link navTitleAnim1" to={"/sign-in"}>Login</Link>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link" to={"/sign-up"}>Sign-up</Link>
+                                        <Link className="nav-link navTitleAnim2" to={"/sign-up"}>Sign-up</Link>
                                     </li>
                                 </ul>
                             </>
