@@ -121,6 +121,7 @@ function Map() {
             let flagImage = document.getElementById("flagImage")
             flagImage.attributes.src.value = images[`${nameWithoutSpaces}.png`]
             flagImage.style.border = '2px solid #bac8a0'
+            flagImage.style.display = "block"
             // console.log(isDrag)
         }
     }

@@ -51,7 +51,7 @@ html,
 #root,
 .auth-wrapper {
   width: 100%;
-  height: 99%;
+  height: 98%;
 }
 .auth-wrapper-logNreg {
   width: 100%;
@@ -246,7 +246,13 @@ html,
 .auth-button {
   margin-right: 5px;
 }
-
+.info-map
+  .react-transform-component
+  .react-transform-element
+  > svg
+  > path{
+    fill: #013642;
+  }
 .info-map
   .react-transform-component
   .react-transform-element
@@ -292,14 +298,22 @@ html,
   margin: 15px 20px;
   color: #ffffff;
 }
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
 .descDIV {
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow-wrap: break-word;
+  box-sizing: content-box;
+  word-wrap: break-word;
+  overflow-y: scroll;
   display: none;
   height: 600px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
 .timediv {
   width: 100px;
 }
@@ -537,7 +551,7 @@ html,
   color: #f0ad4e;
 }
 #fullInfo{
-  animation: fadeIn 700ms cubic-bezier(0.55, 0.06, 0.28, 0.95) 0s;
+  animation: fadeIn 850ms cubic-bezier(0.55, 0.06, 0.28, 0.95) 0s;
 }
 .colMap{
   animation: OpacityFrom0To1 700ms cubic-bezier(0.55, 0.06, 0.28, 0.95) 0s;
@@ -554,6 +568,8 @@ html,
 .navTitleAnim3{
   animation: NavTitlesAnimation 1600ms cubic-bezier(0.55, 0.06, 0.28, 0.95) 0ms;
 }
+
+
 
 
 
@@ -656,7 +672,7 @@ html,
     height: 1px;
   }
   .close-btn {
-    height: 0px;
+    height: 10px;
     padding-top: 0px;
     font-size: 40px;
     padding-right: 0px;

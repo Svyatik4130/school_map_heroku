@@ -15,7 +15,7 @@ import Register from './components/pages/auth/Register'
 import Point from './components/layout/MapForPoint'
 import ListPoints from './components/pages/SeeAllPoints'
 import NotFound from './components/layout/misc/NotFound'
-
+import Footer from './components/layout/Footer'
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -90,6 +90,7 @@ function App() {
               </Route>
             </Switch>
           </div>
+          <Footer />
         </div>
       </Router>
     )

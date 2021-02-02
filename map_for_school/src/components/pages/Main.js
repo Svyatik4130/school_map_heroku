@@ -11,13 +11,13 @@ export default function Main() {
     let isMainModalShowed = localStorage.getItem("isMainModalShowed");
     const handleClose = () => {
         setmodalShowed(true)
-        localStorage.setItem("isMainModalShowed", (isMainModalShowed == null) ? (0) : ((typeof(Number(isMainModalShowed)) === "number") ? (Number(isMainModalShowed) + 1) : (0)));
+        localStorage.setItem("isMainModalShowed", (isMainModalShowed == null) ? (0) : ((typeof (Number(isMainModalShowed)) === "number") ? (Number(isMainModalShowed) + 1) : (0)));
     }
 
-    useEffect(() => {   
-        if(isMainModalShowed !== null){
-            if(typeof(Number(isMainModalShowed)) === "number"){
-                if(Number(isMainModalShowed) >= 2){
+    useEffect(() => {
+        if (isMainModalShowed !== null) {
+            if (typeof (Number(isMainModalShowed)) === "number") {
+                if (Number(isMainModalShowed) >= 2) {
                     setmodalShowed(true)
                 }
             } else {
@@ -28,7 +28,7 @@ export default function Main() {
         if (window.innerWidth < 1000) {
             setAdditionalTextForMobileDevices(<>
                 <br />
-                <p style={{"color": "#f0ad4e"}} ><strong>📱!If you are on mobile device, you have to tap twice to select the country!📱</strong></p>
+                <p style={{ "color": "#f0ad4e" }} ><strong>📱!If you are on mobile device, you have to tap twice to select the country!📱</strong></p>
             </>)
         }
     }, [])
@@ -55,7 +55,7 @@ export default function Main() {
                         <Row>
                             <Col>
                                 <div className="authIMG">
-                                    <img id='flagImage' style={{ width: '100%' }} src={require('../../images/default.png')} alt="flag" />
+                                    <img id='flagImage' style={{ width: '100%', display: "none" }} src={require('../../images/default.png')} alt="flag" />
                                 </div>
                             </Col>
                             <Col>

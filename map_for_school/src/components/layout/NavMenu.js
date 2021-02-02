@@ -9,7 +9,6 @@ import Nav from 'react-bootstrap/Nav'
 export default function NavMenu() {
     const dispatch = useDispatch()
     const history = useHistory()
-    const [url, seturl] = useState(window.location.href)
     const userData = useSelector(state => state.userData)
     const [MenuStatus, setMenuStatus] = useState({seepoints: "", createpoint: ""})
 
