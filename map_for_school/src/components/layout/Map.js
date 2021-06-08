@@ -118,16 +118,17 @@ function Map() {
             descInput.innerHTML = foundedArray.description;
 
             // setting image
+            console.log(images[`${nameWithoutSpaces}.png`].default)
             let flagImage = document.getElementById("flagImage")
-            flagImage.attributes.src.value = images[`${nameWithoutSpaces}.png`]
+            // maybe u should remove ".default from here" idk
+            flagImage.attributes.src.value = images[`${nameWithoutSpaces}.png`].default
             flagImage.style.border = '2px solid #bac8a0'
             flagImage.style.display = "block"
-            // console.log(isDrag)
         }
     }
 
     useEffect(() => {
-        if(window.innerWidth < 1000){
+        if (window.innerWidth < 1000) {
             setDefaultScaleMap(200)
         }
     }, [])

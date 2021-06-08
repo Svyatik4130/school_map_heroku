@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import AppleLogin from 'react-apple-login';
+import GoogleLogin from 'react-google-login';
+import AppleSignin from 'react-apple-signin-auth';
 import { Link } from "react-router-dom"
 import { useHistory } from "react-router-dom"
 import axios from 'axios'
@@ -35,6 +38,10 @@ export default function Login() {
         }
     }
 
+    const responseGoogle = (response) => {
+        console.log(response);
+    }
+
     return (
         <div className="auth-wrapper-logNreg">
             <div className="auth-inner">
@@ -55,6 +62,36 @@ export default function Login() {
                     <p className="forgot-password text-right">
                         Dont have account? <Link to={"/sign-up"}>Sign-up</Link>
                     </p>
+
+                    <AppleSignin
+                        /** Auth options passed to AppleID.auth.init() */
+                        authOptions={{
+                            clientId: 'behance.com',
+                            scope: 'email name',
+                            redirectURI: 'https://example.com',
+                            state: '',
+                            nonce: 'nonce',
+                            usePopup: true,
+                        }}
+                        /** General props */
+                        uiType="dark"
+                        /** className */
+                        className="apple-auth-btn"
+                        /** Allows to change the button's children, eg: for changing the button text */
+                        buttonExtraChildren="Continue with Apple"
+                        /** Checkout README.md for further customization props. */
+                        /** Spread rest props if needed */
+                        onSuccess={(response) => console.log(response)}
+                        onError={(error) => console.error(error)}
+                    />
+
+                    <GoogleLogin
+                        clientId="425644831777-ntps4gccrvjbdkqkom2kf0dtv71lu7q5.apps.googleusercontent.com"
+                        buttonText="Login"
+                        onSuccess={responseGoogle}
+                        onFailure={responseGoogle}
+                        cookiePolicy={'single_host_origin'}
+                    />,
                 </form>
             </div>
         </div>
