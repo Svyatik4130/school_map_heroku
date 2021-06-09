@@ -62,9 +62,8 @@ export default function Login() {
                     <p className="forgot-password text-right">
                         Dont have account? <Link to={"/sign-up"}>Sign-up</Link>
                     </p>
-
-                    <AppleSignin
-                        /** Auth options passed to AppleID.auth.init() */
+                    
+                    {/* <AppleSignin
                         authOptions={{
                             clientId: 'behance.com',
                             scope: 'email name',
@@ -73,25 +72,20 @@ export default function Login() {
                             nonce: 'nonce',
                             usePopup: true,
                         }}
-                        /** General props */
                         uiType="dark"
-                        /** className */
                         className="apple-auth-btn"
-                        /** Allows to change the button's children, eg: for changing the button text */
                         buttonExtraChildren="Continue with Apple"
-                        /** Checkout README.md for further customization props. */
-                        /** Spread rest props if needed */
                         onSuccess={(response) => console.log(response)}
                         onError={(error) => console.error(error)}
                     />
 
                     <GoogleLogin
-                        clientId="425644831777-ntps4gccrvjbdkqkom2kf0dtv71lu7q5.apps.googleusercontent.com"
+                        clientId="425644831777-hbnidi7ukehet9c3kig00gnpala12bad.apps.googleusercontent.com"
                         buttonText="Login"
                         onSuccess={responseGoogle}
                         onFailure={responseGoogle}
                         cookiePolicy={'single_host_origin'}
-                    />,
+                    /> */}
                 </form>
             </div>
         </div>
