@@ -56,7 +56,7 @@ function Map() {
             wholeinfo.style.height = `800px`;
 
             let nameWithoutSpaces = name.replace(/\s/g, '');
-            console.log(nameWithoutSpaces)
+            // console.log(nameWithoutSpaces)
 
             // checking
             if (!foundedArray) {
@@ -118,7 +118,6 @@ function Map() {
             descInput.innerHTML = foundedArray.description;
 
             // setting image
-            console.log(images[`${nameWithoutSpaces}.png`].default)
             let flagImage = document.getElementById("flagImage")
             // maybe u should remove ".default from here" idk
             flagImage.attributes.src.value = images[`${nameWithoutSpaces}.png`].default

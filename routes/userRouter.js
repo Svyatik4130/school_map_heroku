@@ -37,6 +37,30 @@ router.post('/register', async (req, res) => {
     }
 })
 
+//GOOGLE auth
+router.post('/googleUserAuth', async (req, res) => {
+    try {
+        const { email, password } = req.body
+
+        const alreadyRegisteredGoogleUser = await User.findOne({ email: email })
+        if (alreadyRegisteredGoogleUser !== null) {
+            res.json(alreadyRegisteredGoogleUser)
+        } else {
+            const salt = await bcrypt.genSalt()
+            const passwordHash = await bcrypt.hash(password, salt)
+            const newUser = new User({
+                email,
+                password: passwordHash,
+                roleId: 0
+            })
+            const savedUser = await newUser.save()
+            res.json(savedUser)
+        }
+    } catch (err) {
+        res.status(500).json(err.message)
+    }
+})
+
 router.post("/login", async (req, res) => {
     try {
         const { email, password } = req.body
@@ -71,15 +95,24 @@ router.post("/login", async (req, res) => {
 router.post("/tokenIsValid", async (req, res) => {
     try {
         const token = req.header("x-auth-token")
+        // console.log(token)
         if (!token) return res.json(false)
 
-        const verified = jwt.verify(token, process.env.JWT_SECRET)
-        if (!verified) return res.json(false)
+        if (token.length < 500) {
+            const verified = jwt.verify(token, process.env.JWT_SECRET)
 
-        const user = await User.findById(verified.id)
-        if (!user) return res.json(false)
+            if (!verified) return res.json(false)
+            const user = await User.findById(verified.id)
+            if (!user) return res.json(false)
+            return res.json(true)
+        } else {
+            const verified = jwt.decode(token)
 
-        return res.json(true)
+            if (!verified) return res.json(false)
+            const user = await User.findOne({ email: verified.email })
+            if (!user) return res.json(false)
+            return res.json(true)
+        }
     } catch (err) {
         res.status(500).json(err.message)
     }

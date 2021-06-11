@@ -28,6 +28,7 @@ function App() {
         localStorage.setItem("auth-token", "");
         token = "";
       }
+      console.log(token)
       const tokenRes = await axios.post("/users/tokenIsValid", null, {
         headers: { "x-auth-token": token },
       })

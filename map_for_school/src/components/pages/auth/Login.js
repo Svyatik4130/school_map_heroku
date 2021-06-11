@@ -38,7 +38,31 @@ export default function Login() {
         }
     }
 
-    const responseGoogle = (response) => {
+    const responseGoogle = async (response) => {
+        // qustion mark. will not throught an error if the object would not come to this function OR the object would be empty
+        console.log(response)
+        const result = response?.profileObj
+        const token = response?.tokenId
+        try {
+            const newUser = { email: result.email, password: response?.tokenObj.access_token }
+            await axios.post("/users/googleUserAuth", newUser)
+
+            const userRespond = await axios.get("/users/getme", {
+                headers: { "x-auth-token": token },
+            });
+
+            dispatch(loggedUser({
+                token: token,
+                user: userRespond.data
+            }))
+            localStorage.setItem("auth-token", token)
+            history.push('/')
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const failedResponseGoogle = (response) => {
         console.log(response);
     }
 
@@ -62,7 +86,7 @@ export default function Login() {
                     <p className="forgot-password text-right">
                         Dont have account? <Link to={"/sign-up"}>Sign-up</Link>
                     </p>
-                    
+
                     {/* <AppleSignin
                         authOptions={{
                             clientId: 'behance.com',
@@ -77,15 +101,15 @@ export default function Login() {
                         buttonExtraChildren="Continue with Apple"
                         onSuccess={(response) => console.log(response)}
                         onError={(error) => console.error(error)}
-                    />
+                    /> */}
 
                     <GoogleLogin
-                        clientId="425644831777-hbnidi7ukehet9c3kig00gnpala12bad.apps.googleusercontent.com"
-                        buttonText="Login"
+                        clientId="425644831777-ktunou2ldpdqi4mqe8r4fn724omhucmg.apps.googleusercontent.com"
+                        buttonText="Continue with Google"
                         onSuccess={responseGoogle}
-                        onFailure={responseGoogle}
+                        onFailure={failedResponseGoogle}
                         cookiePolicy={'single_host_origin'}
-                    /> */}
+                    />
                 </form>
             </div>
         </div>
